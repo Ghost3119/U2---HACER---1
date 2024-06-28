@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración de Laravel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <a href="/" class="nav-brand">Inicio</a>
+            <ul class="nav-menu">
+                <li><a href="/">Frameworks</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Configuración y Publicación de un Sitio Usando Laravel</h1>
+        <ol class="steps-list">
+            <li>
+                <h2>Instalación de Composer</h2>
+                <p>Descarga e instala Composer desde <a href="https://getcomposer.org/" target="_blank">su sitio web
+                        oficial</a>.</p>
+            </li>
+            <li>
+                <h2>Creación de un Nuevo Proyecto Laravel</h2>
+                <p>Abre una terminal y ejecuta el siguiente comando para crear un nuevo proyecto Laravel:</p>
+                <pre><code>composer create-project --prefer-dist laravel/laravel mi-proyecto-laravel</code></pre>
+            </li>
+            <li>
+                <h2>Configuración del Servidor de Desarrollo</h2>
+                <p>Navega al directorio del proyecto y ejecuta el servidor de desarrollo:</p>
+                <pre><code>cd mi-proyecto-laravel
+php artisan serve</code></pre>
+                <p>Abre un navegador web y navega a <a href="http://localhost:8000"
+                        target="_blank">http://localhost:8000</a> para ver tu aplicación en funcionamiento.</p>
+            </li>
+            <li>
+                <h2>Configuración del Entorno</h2>
+                <p>Edita el archivo <code>.env</code> en el directorio del proyecto para configurar la base de datos y
+                    otras variables de entorno según tus necesidades.</p>
+            </li>
+            <li>
+                <h2>Despliegue del Sitio</h2>
+                <p>Para desplegar tu sitio, puedes usar servicios como Heroku, AWS, o un servidor VPS. Aquí tienes una
+                    guía rápida para Heroku:</p>
+                <ol>
+                    <li>Instala el <a href="https://devcenter.heroku.com/articles/heroku-cli" target="_blank">CLI de
+                            Heroku</a>.</li>
+                    <li>Inicia sesión en Heroku desde la terminal:</li>
+                    <pre><code>heroku login</code></pre>
+                    <li>Crea un archivo <code>Procfile</code> en el directorio del proyecto con el siguiente contenido:
+                    </li>
+                    <pre><code>web: vendor/bin/heroku-php-apache2 public/</code></pre>
+                    <li>Inicializa un repositorio git en el directorio del proyecto:</li>
+                    <pre><code>git init
+git add .
+git commit -m "Initial commit"</code></pre>
+                    <li>Crea una nueva aplicación en Heroku:</li>
+                    <pre><code>heroku create</code></pre>
+                    <li>Sube tu proyecto a Heroku:</li>
+                    <pre><code>git push heroku master</code></pre>
+                    <li>Abre tu aplicación desplegada:</li>
+                    <pre><code>heroku open</code></pre>
+                </ol>
+            </li>
+        </ol>
+        <a href="/" class="back-link">Volver al inicio</a>
+    </div>
+</body>
+
+</html>

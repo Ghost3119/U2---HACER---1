@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración de Spring</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <a href="/" class="nav-brand">Inicio</a>
+            <ul class="nav-menu">
+                <li><a href="/">Frameworks</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Configuración y Publicación de un Sitio Usando Spring</h1>
+        <ol class="steps-list">
+            <li>
+                <h2>Instalación de Java y Maven</h2>
+                <p>Descarga e instala JDK desde <a href="https://www.oracle.com/java/technologies/javase-downloads.html"
+                        target="_blank">el sitio web oficial</a> y Maven desde <a href="https://maven.apache.org/"
+                        target="_blank">su sitio web oficial</a>.</p>
+            </li>
+            <li>
+                <h2>Creación de un Proyecto Spring Boot</h2>
+                <p>Usa Spring Initializr para generar un proyecto Spring Boot:</p>
+                <pre><code>https://start.spring.io/</code></pre>
+                <p>Selecciona las dependencias necesarias y descarga el proyecto.</p>
+            </li>
+            <li>
+                <h2>Importación del Proyecto en un IDE</h2>
+                <p>Importa el proyecto descargado en tu IDE favorito, como IntelliJ IDEA o Eclipse.</p>
+            </li>
+            <li>
+                <h2>Desarrollo y Prueba de la Aplicación</h2>
+                <p>Ejecuta la aplicación desde tu IDE o desde la línea de comandos:</p>
+                <pre><code>mvn spring-boot:run</code></pre>
+                <p>Abre un navegador web y navega a <a href="http://localhost:8080"
+                        target="_blank">http://localhost:8080</a> para ver tu aplicación en funcionamiento.</p>
+            </li>
+            <li>
+                <h2>Construcción del Proyecto</h2>
+                <p>Construye el proyecto para crear un archivo JAR ejecutable:</p>
+                <pre><code>mvn clean package</code></pre>
+                <p>El archivo JAR se encontrará en el directorio <code>target/</code>.</p>
+            </li>
+            <li>
+                <h2>Despliegue del Sitio</h2>
+                <p>Para desplegar tu sitio, puedes usar servicios como Heroku, AWS, o un servidor VPS. Aquí tienes una
+                    guía
+                    rápida para Heroku:</p>
+                <ol>
+                    <li>Instala el <a href="https://devcenter.heroku.com/articles/heroku-cli" target="_blank">CLI de
+                            Heroku</a>.</li>
+                    <li>Inicia sesión en Heroku desde la terminal:</li>
+                    <pre><code>heroku login</code></pre>
+                    <li>Crea un archivo <code>Procfile</code> en el directorio del proyecto con el siguiente contenido:
+                    </li>
+                    <pre><code>web: java -jar target/mi-proyecto-spring-0.0.1-SNAPSHOT.jar</code></pre>
+                    <li>Inicializa un repositorio git en el directorio del proyecto:</li>
+                    <pre><code>git init
+    git add .
+    git commit -m "Initial commit"</code></pre>
+                    <li>Crea una nueva aplicación en Heroku:</li>
+                    <pre><code>heroku create</code></pre>
+                    <li>Sube tu proyecto a Heroku:</li>
+                    <pre><code>git push heroku master</code></pre>
+                    <li>Abre tu aplicación desplegada:</li>
+                    <pre><code>heroku open</code></pre>
+                </ol>
+            </li>
+        </ol>
+        <a href="/" class="back-link">Volver al inicio</a>
+    </div>
+</body>
+
+</html>

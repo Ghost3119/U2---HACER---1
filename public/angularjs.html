@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración de AngularJS</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <a href="/" class="nav-brand">Inicio</a>
+            <ul class="nav-menu">
+                <li><a href="/">Frameworks</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Configuración y Publicación de un Sitio Usando AngularJS</h1>
+        <ol class="steps-list">
+            <li>
+                <h2>Instalación de Node.js y npm</h2>
+                <p>Descarga e instala Node.js desde <a href="https://nodejs.org/" target="_blank">su sitio web
+                        oficial</a>.
+                </p>
+            </li>
+            <li>
+                <h2>Instalación de Angular CLI</h2>
+                <p>Abre una terminal y ejecuta el siguiente comando para instalar Angular CLI:</p>
+                <pre><code>npm install -g @angular/cli</code></pre>
+            </li>
+            <li>
+                <h2>Creación de un Nuevo Proyecto Angular</h2>
+                <p>Crea un nuevo proyecto Angular:</p>
+                <pre><code>ng new mi-proyecto-angular</code></pre>
+                <p>Sigue las instrucciones para configurar el proyecto.</p>
+            </li>
+            <li>
+                <h2>Desarrollo y Prueba de la Aplicación</h2>
+                <p>Navega al directorio del proyecto y ejecuta el servidor de desarrollo:</p>
+                <pre><code>cd mi-proyecto-angular
+    ng serve</code></pre>
+                <p>Abre un navegador web y navega a <a href="http://localhost:4200"
+                        target="_blank">http://localhost:4200</a> para ver tu aplicación en funcionamiento.</p>
+            </li>
+            <li>
+                <h2>Construcción de la Aplicación para Producción</h2>
+                <p>Construye la aplicación para producción:</p>
+                <pre><code>ng build --prod</code></pre>
+                <p>Los archivos de producción se encontrarán en el directorio <code>dist/</code>.</p>
+            </li>
+            <li>
+                <h2>Despliegue del Sitio</h2>
+                <p>Para desplegar tu sitio, puedes usar servicios como Firebase, Netlify, o GitHub Pages. Aquí tienes
+                    una
+                    guía rápida para Firebase:</p>
+                <ol>
+                    <li>Instala la CLI de Firebase:</li>
+                    <pre><code>npm install -g firebase-tools</code></pre>
+                    <li>Inicia sesión en Firebase:</li>
+                    <pre><code>firebase login</code></pre>
+                    <li>Inicializa tu proyecto Firebase en el directorio del proyecto Angular:</li>
+                    <pre><code>firebase init</code></pre>
+                    <li>Selecciona "Hosting" y sigue las instrucciones para configurar el despliegue.</li>
+                    <li>Despliega tu aplicación:</li>
+                    <pre><code>firebase deploy</code></pre>
+                </ol>
+            </li>
+        </ol>
+        <a href="/" class="back-link">Volver al inicio</a>
+    </div>
+</body>
+
+</html>
