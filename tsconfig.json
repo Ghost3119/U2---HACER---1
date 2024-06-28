@@ -8,5 +8,9 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
-  }
+  },
+  "include": [
+    "./src",
+    "./Apps web/U2 - HACER # 1/netlify/functions/api.ts"
+  ]
 }
